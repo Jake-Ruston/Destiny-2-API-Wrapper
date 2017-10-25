@@ -1,0 +1,25 @@
+{
+  "name": "destiny2",
+  "version": "1.0.1",
+  "description": "An API wrapper for Destiny 2.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jake-Ruston/destiny2.git"
+  },
+  "keywords": [
+    "destiny"
+  ],
+  "author": "Jake Ruston <rjake@hoitmail.co.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jake-Ruston/destiny2/issues"
+  },
+  "homepage": "https://github.com/Jake-Ruston/destiny2#readme",
+  "dependencies": {
+    "node-fetch": "^1.7.3"
+  }
+}
