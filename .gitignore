@@ -1,2 +1,3 @@
 node_modules/
-package-lcok.json
+package-lock.json
+config.js

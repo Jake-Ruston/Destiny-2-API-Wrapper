@@ -1,1 +1,1 @@
-module.exports.TOKEN = '6c91203943994479971536d308aa8212';
+module.exports.TOKEN = 'c226aece13ed45609fce7919b7efcef7';
