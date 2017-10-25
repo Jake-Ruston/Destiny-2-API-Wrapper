@@ -1,1 +1,0 @@
-module.exports.TOKEN = '6c91203943994479971536d308aa8212';
