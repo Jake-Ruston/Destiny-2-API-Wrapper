@@ -39,7 +39,6 @@ class Client {
                     '2305843009269193704': [Object],
                     '2305843009269193705': [Object] } ]
                  */
-                 // test
               });
             })
             .catch(err => reject(err));
