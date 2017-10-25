@@ -1,4 +1,4 @@
-const { TOKEN } = requrie('config');
+const { TOKEN } = require('config');
 const destiny = require('.');
 const client = new destiny.Client(TOKEN);
 
