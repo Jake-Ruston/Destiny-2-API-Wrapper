@@ -1,4 +1,6 @@
 const fetch = require('node-fetch');
+const Profile = require('./Profile');
+const Character = require('./Character');
 
 class Client {
   constructor(apikey) {
@@ -26,11 +28,17 @@ class Client {
         .then(res => res.json())
         .then(player => {
           membershipId = player.Response[0].membershipId;
-          fetch(`${this.base}/${platform}/Profile/${membershipId}?components=Profiles`, this.options)
+          fetch(`${this.base}/${platform}/Profile/${membershipId}?components=Characters`, this.options)
             .then(res => res.json())
             .then(profile => {
               resolve({
-                profile: profile.Response.profile.data
+                //profile: new Profile(profile.Response.profile.data)
+                characters: Array(profile.Response.characters.data)
+                /**
+                [ { '2305843009269193703': [Object],
+                    '2305843009269193704': [Object],
+                    '2305843009269193705': [Object] } ]
+                 */
               });
             })
             .catch(err => reject(err));
