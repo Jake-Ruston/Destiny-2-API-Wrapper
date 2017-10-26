@@ -24,7 +24,7 @@ class Client {
       if (!displayName) reject('No display name provided.');
 
       let membershipId;
-      fetch(`${this.base}/SearchDestinyPlayer/${platform}/${encodeURIComponent(displayName)}`, this.options)
+      fetch(`${this.base}/SearchDestinyPlayer/${platform.toString()}/${encodeURIComponent(displayName)}`, this.options)
         .then(res => res.json())
         .then(player => {
           membershipId = player.Response[0].membershipId;
