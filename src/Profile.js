@@ -10,7 +10,8 @@ class Profile {
 const platforms = {
   1: ['1', 'xbl', 'xbox'],
   2: ['2', 'psn', 'playstation'],
-  3: ['3', 'pc', 'computer']
+  4: ['4', 'pc', 'battlenet'],
+  254: ['254', 'pc', 'bungie']
 };
 
 module.exports = Profile;

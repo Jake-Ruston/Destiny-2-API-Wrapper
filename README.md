@@ -14,4 +14,4 @@ const client = new Client();
 client.getProfile('PushyParachute4', '1').then(data => console.log(data));
 ```
 - `display name` is required and must be a string.
-- `platform` is required. Possible platforms are `1`: xbox, `2`: psn, `3`: pc
+- `platform` is required. Possible platforms are `1`: xbox, `2`: psn, `4`: battlenet, `254`: bungie
