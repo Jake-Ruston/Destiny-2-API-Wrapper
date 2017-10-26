@@ -2,8 +2,8 @@ class Profile {
   constructor(content) {
     this.platform = platforms[content.userInfo.membershipType];
     this.displayName = content.userInfo.displayName;
-    this.membershipId = content.userInfo.membershipId;
-    this.lastPlayed = content.dateLastPlayed;
+    this.id = content.userInfo.membershipId;
+    this.lastPlayed = (Date.parse(content.dateLastPlayed)/1000).toString();
   }
 }
 

@@ -15,7 +15,7 @@ class Client {
 
   /**
    * @param {string} displayName The display name of the user
-   * @param {string} platform Either `xbl`, `psn`, `pc`
+   * @param {string} platform Either `1`: xbox, `2`: psn, `3`: pc
    * @returns {Promise<Object>} Object containing info for this player
    */
 
@@ -28,17 +28,12 @@ class Client {
         .then(res => res.json())
         .then(player => {
           membershipId = player.Response[0].membershipId;
-          fetch(`${this.base}/${platform}/Profile/${membershipId}?components=Characters`, this.options)
+          fetch(`${this.base}/${platform}/Profile/${membershipId}?components=Profiles,Characters`, this.options)
             .then(res => res.json())
             .then(profile => {
               resolve({
-                //profile: new Profile(profile.Response.profile.data)
-                characters: Array(profile.Response.characters.data)
-                /**
-                [ { '2305843009269193703': [Object],
-                    '2305843009269193704': [Object],
-                    '2305843009269193705': [Object] } ]
-                 */
+                profile: new Profile(profile.Response.profile.data),
+                characters: Object.keys(profile.Response.characters.data).map(key => new Character(profile.Response.characters.data[key]))
               });
             })
             .catch(err => reject(err));
