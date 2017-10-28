@@ -5,7 +5,7 @@ const Character = require('./Character');
 class Client {
   constructor(apikey) {
     if (!apikey) throw new Error('You must supply an API Key.');
-    this.base = 'https://bungie.net/Platform/Destiny2';
+    this.base = 'https://www.bungie.net/Platform/Destiny2';
     this.options = {
       headers: {
         'X-API-Key': apikey
