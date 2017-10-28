@@ -28,7 +28,7 @@ class Client {
         .then(res => res.json())
         .then(player => {
           if (player.ErrorCode === 2101) reject(new Error(player.Message));
-          if (!player.Response.length) reject(new Error('This player does not exist.'));
+          if (!player.Response.length) reject('This player does not exist.');
           membershipId = player.Response[0].membershipId;
           fetch(`${this.base}/${platform}/Profile/${membershipId}?components=Profiles,Characters`, this.options)
             .then(res => res.json())
