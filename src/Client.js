@@ -27,7 +27,7 @@ class Client {
       fetch(`${this.base}/SearchDestinyPlayer/${platform.toString()}/${encodeURIComponent(displayName)}`, this.options)
         .then(res => res.json())
         .then(player => {
-          if (player.ErrorCode === 2101) reject(new Error(player.Message));
+          if (player.ErrorCode == 2101) reject(new Error(player.Message));
           if (!player.Response.length) reject('This player does not exist.');
           membershipId = player.Response[0].membershipId;
           fetch(`${this.base}/${platform}/Profile/${membershipId}?components=Profiles,Characters`, this.options)
