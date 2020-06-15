@@ -1,14 +1,21 @@
-# Destiny 2
-A simple to use module for interacting with the Destiny 2 API.
+# Destiny 2 [![npm downloads](https://img.shields.io/npm/dt/destiny2.svg?maxAge=3600)](https://www.npmjs.com/package/destiny2) [![Dependencies](https://img.shields.io/david/jake-ruston/destiny2.svg?maxAge=3600)](https://david-dm.org/jake-ruston/destiny2) [![RunKit](https://badge.runkitcdn.com/destiny2.svg)](https://npm.runkit.com/destiny2)
 
-## Install
+<img src="https://img.pngio.com/destiny-destiny-2-logo-transparent-hd-png-download-1600x1598-destiny-logo-png-840_819.png" alt="destiny 2" width="250" align="right" />
+
+##### [Changelog](https://github.com/Jake-Ruston/Destiny-2-API-Wrapper/wiki/Changelog) | [Issues](https://github.com/Jake-Ruston/Destiny-2-API-Wrapper/issues)
+
+A simple, easy to use module for interacting with the Destiny 2 API.
+
+## Setup and Installation
 ```
-$ npm install destiny2
+$ npm i destiny2
 ```
-## How to
+
+## Getting Started
 ```js
-// require the package
+// Bring in the Destiny 2 module
 const { Client } = require('destiny2');
+// Create an instance of the client with your API Key
 const client = new Client('TOKEN');
 
 client.getProfile('PushyParachute4', '1').then(data => console.log(data));
