@@ -11,7 +11,9 @@ const platforms = {
   1: ['1', 'xbl', 'xbox'],
   2: ['2', 'psn', 'playstation'],
   4: ['4', 'pc', 'battlenet'],
-  254: ['254', 'pc', 'bungie']
+  254: ['254', 'pc', 'bungie'],
+  3: ['3', 'pc', 'steam'],
+  5: ['5', 'pc', 'stadia']
 };
 
 module.exports = Profile;
