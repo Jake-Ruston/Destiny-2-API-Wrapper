@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/Jake-Ruston/destiny2#readme",
   "dependencies": {
-    "node-fetch": "^1.7.3"
+    "node-fetch": "^2.6.1"
   }
 }
